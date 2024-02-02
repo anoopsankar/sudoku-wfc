@@ -127,7 +127,7 @@ function findLowestEntropyCell() {
 }
 
 function generateAllCandidates(board) {
-    let numbersArray = Array.from({ length: 9 }, (_, index) => index + 1);
+    let numbersArray = Array.from({ length: 9 }, (_, index) => index + 1)
 
     for (let i = 0; i < board.length; i++) {
         candidates.push([])
@@ -157,26 +157,26 @@ function generateSudokuBoard(boardSize) {
 }
 
 function drawBoard(board, guesses, elementId) {
-    let table = "<table class='sudoku-board'>";
+    let table = "<table class='sudoku-board'>"
     for (let i = 0; i < board.length; i++) {
         if (i % 3 === 0 && i !== 0) {
-            table += "<tr style='border-top: 3px solid #333;'>";
+            table += "<tr style='border-top: 3px solid #333;'>"
         } else {
             table += "<tr>";
         }
         for (let j = 0; j < board[i].length; j++) {
             let content = board[i][j] == 0 ? "<div class='choices'>" + guesses[i][j].join(' ') + "</div> " : board[i][j]
             if (j % 3 === 0 && j !== 0) {
-                table += "<td style='border-left: 3px solid #333;'>" + content + "</td>";
+                table += "<td style='border-left: 3px solid #333;'>" + content + "</td>"
             } else {
-                table += "<td>" + content + "</td>";
+                table += "<td>" + content + "</td>"
             }
         }
-        table += "</tr>";
+        table += "</tr>"
         
     }
-    table += "</table>";
+    table += "</table>"
 
-    document.getElementById(elementId).innerHTML = table;
+    document.getElementById(elementId).innerHTML = table
 }
 
