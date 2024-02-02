@@ -1,0 +1,22 @@
+.sudoku-board {
+    border-collapse: collapse;
+    border: 3px solid #222;
+}
+
+.sudoku-board td {
+    border: 2px solid #ddd;
+    height: 64px;
+    width: 64px;
+    text-align: center;
+    font-size: 48px;
+}
+
+.choices {
+    font-size: 16px;
+    color: #aaa;
+}
+
+#error {
+    visibility: hidden;
+    color: red;
+}
